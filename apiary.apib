@@ -58,3 +58,29 @@ Components related resources of the **Components API**
                 },
                 "success": true
             }
+            
+## Component [/components/{id}]
+A single Component object with all its details
+
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the Component to perform action with. Has example value.
+    
+### Retrieve a Component [GET]
++ Response 200 (application/json)
+    + Body
+
+            {
+                "elapsed_time": 2,
+                "entries": [
+                    {
+                        "component_id": 1,
+                        "modified_by": 1,
+                        "name": "Universal Header",
+                        "timestamp": "2010-08-19T21:39:47.000Z"
+                    }
+                ],
+                "inputs": {
+                    "_id": "1"
+                },
+                "success": true
+            }
