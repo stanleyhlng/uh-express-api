@@ -798,11 +798,13 @@ HOST: http://www.google.com
                 }
             }
             
-## Template Collection [/templates{?start,count}]
+## Template Collection [/templates{?resource_id,component_id,start,count}]
 ### List all templates [GET]
 
 + Parameters
 
+    + resource_id (optional, string, `11058`) ... Resource filters
+    + component_id (optional, string, `1,5`) ... Component filters
     + start (optional, number, `0`) ... This offsets the start of each page by the number specified.
     + count (optional, number, `10`) ... This is the number of records returned in each page.  A count of 0 will return to no results.
 
@@ -990,3 +992,18 @@ HOST: http://www.google.com
                     }
                 }
             }
+            
+## TemplateInstance Collection [/templates/instances{?template_id,start,count}]
+### List all instances [GET]
+
++ Parameters
+
+    + template_id (optional, string, `11052`) ... Template filters
+    + start (optional, number, `0`) ... This offsets the start of each page by the number specified.
+    + count (optional, number, `10`) ... This is the number of records returned in each page.  A count of 0 will return to no results.
+
++ Response 200 (application/json)
+
+    + Body
+
+
