@@ -6,7 +6,7 @@ HOST: http://www.google.com
 # Group Components Resources
 
 ## ComponentAttribute Collection [/components/attributes{?start,count}]
-### List all attribute [GET]
+### List all attributes [GET]
 
 + Parameters
 
@@ -300,3 +300,76 @@ HOST: http://www.google.com
                     }
                 }
             }
+            
+## ComponentInstance Collection [/components/instances{/?start,count}]
+### List all instances [GET]
+
++ Parameters
+
+    + component_id (optional, string, `1,5`) ... Component filters
+    + start (optional, number, `0`) ... This offsets the start of each page by the number specified.
+    + count (optional, number, `10`) ... This is the number of records returned in each page.  A count of 0 will return to no results.
+
++ Response 200 (application/json)
+
+    + Body
+
+        {
+            "code": 200,
+            "data": [
+                {
+                    "component_id": 1,
+                    "hashcode": "dafe6c7278465a03a417c0ad4e0f51c0",
+                    "id": 35383,
+                    "modified_by": 0,
+                    "name": "topbar",
+                    "status_id": 3,
+                    "timestamp": "2013-03-23T03:57:14.000Z"
+                },
+                {
+                    "component_id": 1,
+                    "hashcode": "437cf2c381c0f145c9c4b53212f2bbb9",
+                    "id": 35254,
+                    "modified_by": 0,
+                    "name": "offnet",
+                    "status_id": 3,
+                    "timestamp": "2013-01-17T19:53:37.000Z"
+                },
+                {
+                    "component_id": 1,
+                    "hashcode": "98d8073ce7abaea44e60c08bdda42d7d",
+                    "id": 21261,
+                    "modified_by": 0,
+                    "name": "slim",
+                    "status_id": 3,
+                    "timestamp": "2012-07-31T21:20:37.000Z"
+                },
+                {
+                    "component_id": 1,
+                    "hashcode": "da6e2ad4dda1de21a28f4f237da4c0b2",
+                    "id": 21024,
+                    "modified_by": 0,
+                    "name": "standard",
+                    "status_id": 3,
+                    "timestamp": "2012-05-24T22:12:34.000Z"
+                },
+                {
+                    "component_id": 1,
+                    "hashcode": "66ce7d4e59da33258c5163d4fb62435e",
+                    "id": 17374,
+                    "modified_by": 0,
+                    "name": "slim",
+                    "status_id": 3,
+                    "timestamp": "2011-12-20T19:48:27.000Z"
+                }
+            ],
+            "info": {
+                "elapsed_time": 4,
+                "inputs": {
+                    "component_id": "1",
+                    "count": 5,
+                    "start": 0
+                },
+                "total": 7
+            }
+        }
