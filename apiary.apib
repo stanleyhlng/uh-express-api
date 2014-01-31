@@ -301,7 +301,7 @@ HOST: http://www.google.com
                 }
             }
             
-## ComponentInstance Collection [/components/instances{/?component_id,start,count}]
+## ComponentInstance Collection [/components/instances{?component_id,start,count}]
 ### List all instances [GET]
 
 + Parameters
@@ -373,7 +373,7 @@ HOST: http://www.google.com
                     "total": 7
                 }
             }
-            
+
 ## ComponentInstance [/components/instances/{id}]
 ### Retrieve a component instance [GET]
 
@@ -447,5 +447,205 @@ HOST: http://www.google.com
                         "show_attribute_values": "1",
                         "show_component": "1"
                     }
+                }
+            }
+
+## RuleInstance Collection [/components/instances/{id}/rules/instances{?start,count}]
+### List all the component instance rules [GET]
+
++ Parameters
+
+    + id (required, string, `21024`) ... Component instance id
+    + start (optional, number, `0`) ... This offsets the start of each page by the number specified.
+    + count (optional, number, `10`) ... This is the number of records returned in each page.  A count of 0 will return to no results.
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "code": 200,
+                "data": [
+                    {
+                        "component_instance": [
+                            {
+                                "component_id": 1,
+                                "hashcode": "da6e2ad4dda1de21a28f4f237da4c0b2",
+                                "id": 21024,
+                                "modified_by": 0,
+                                "name": "standard",
+                                "status_id": 3,
+                                "timestamp": "2012-05-24T22:12:34.000Z"
+                            }
+                        ],
+                        "component_instance_id": 21024,
+                        "id": 121,
+                        "mapping_id": 32169,
+                        "modified_by": 0,
+                        "name": "Device is Smartphone",
+                        "rule_id": 0,
+                        "rule_instance_value": "<equals><device/><text>smartphone</text></equals>",
+                        "rule_position": 0,
+                        "rule_weight": 0,
+                        "template_instance": [
+                            {
+                                "id": 15609,
+                                "modified_by": 0,
+                                "name": "Universal Header 3.0.2 Mobile Layout",
+                                "status_id": 0,
+                                "template_id": 10661,
+                                "timestamp": "2013-01-23T18:26:03.000Z"
+                            }
+                        ],
+                        "template_instance_id": 15609,
+                        "timestamp": "2012-05-30T20:50:56.000Z"
+                    },
+                    {
+                        "component_instance": [
+                            {
+                                "component_id": 1,
+                                "hashcode": "da6e2ad4dda1de21a28f4f237da4c0b2",
+                                "id": 21024,
+                                "modified_by": 0,
+                                "name": "standard",
+                                "status_id": 3,
+                                "timestamp": "2012-05-24T22:12:34.000Z"
+                            }
+                        ],
+                        "component_instance_id": 21024,
+                        "id": 122,
+                        "mapping_id": 32499,
+                        "modified_by": 0,
+                        "name": "Device is tablet",
+                        "rule_id": 0,
+                        "rule_instance_value": "<equals><device/><text>tablet</text></equals>",
+                        "rule_position": 1,
+                        "rule_weight": 0,
+                        "template_instance": [
+                            {
+                                "id": 15693,
+                                "modified_by": 0,
+                                "name": "Universal Header 3.0.2 Tablet Layout",
+                                "status_id": 0,
+                                "template_id": 10697,
+                                "timestamp": "2013-03-01T04:39:07.000Z"
+                            }
+                        ],
+                        "template_instance_id": 15693,
+                        "timestamp": "2012-05-30T20:51:16.000Z"
+                    },
+                    {
+                        "component_instance": [
+                            {
+                                "component_id": 1,
+                                "hashcode": "da6e2ad4dda1de21a28f4f237da4c0b2",
+                                "id": 21024,
+                                "modified_by": 0,
+                                "name": "standard",
+                                "status_id": 3,
+                                "timestamp": "2012-05-24T22:12:34.000Z"
+                            }
+                        ],
+                        "component_instance_id": 21024,
+                        "id": 262,
+                        "mapping_id": 32589,
+                        "modified_by": 0,
+                        "name": "mail uh3 and test=1",
+                        "rule_id": 0,
+                        "rule_instance_value": "<and><and><equals><languagetag/><text>en-us</text></equals><equals><property/><text>mail</text></equals></and><and><equals><experience/><text>uh3</text></equals><equals><test/><text>1</text></equals></and></and>",
+                        "rule_position": 2,
+                        "rule_weight": 0,
+                        "template_instance": [
+                            {
+                                "id": 12664,
+                                "modified_by": 0,
+                                "name": "Universal Header 3.0.2 Standard Layout (Minty)",
+                                "status_id": 0,
+                                "template_id": 10550,
+                                "timestamp": "2012-10-29T20:59:04.000Z"
+                            }
+                        ],
+                        "template_instance_id": 12664,
+                        "timestamp": "2013-03-28T18:56:10.000Z"
+                    },
+                    {
+                        "component_instance": [
+                            {
+                                "component_id": 1,
+                                "hashcode": "da6e2ad4dda1de21a28f4f237da4c0b2",
+                                "id": 21024,
+                                "modified_by": 0,
+                                "name": "standard",
+                                "status_id": 3,
+                                "timestamp": "2012-05-24T22:12:34.000Z"
+                            }
+                        ],
+                        "component_instance_id": 21024,
+                        "id": 263,
+                        "mapping_id": 32575,
+                        "modified_by": 0,
+                        "name": "uh2 experience",
+                        "rule_id": 0,
+                        "rule_instance_value": "<equals><experience/><text>uh2</text></equals>",
+                        "rule_position": 3,
+                        "rule_weight": 0,
+                        "template_instance": [
+                            {
+                                "id": 2231,
+                                "modified_by": 0,
+                                "name": "Universal Header 2.0.4 (most props)",
+                                "status_id": 0,
+                                "template_id": 92,
+                                "timestamp": "2011-04-22T01:28:28.000Z"
+                            }
+                        ],
+                        "template_instance_id": 2231,
+                        "timestamp": "2013-03-29T00:34:10.000Z"
+                    },
+                    {
+                        "component_instance": [
+                            {
+                                "component_id": 1,
+                                "hashcode": "da6e2ad4dda1de21a28f4f237da4c0b2",
+                                "id": 21024,
+                                "modified_by": 0,
+                                "name": "standard",
+                                "status_id": 3,
+                                "timestamp": "2012-05-24T22:12:34.000Z"
+                            }
+                        ],
+                        "component_instance_id": 21024,
+                        "id": 260,
+                        "mapping_id": 32530,
+                        "modified_by": 0,
+                        "name": "property is srp and experience is uh3",
+                        "rule_id": 0,
+                        "rule_instance_value": "<and><notequals><iframe/><text>1</text></notequals><and><and><and><notequals><device/><text>smartphone</text></notequals><notequals><device/><text>tablet</text></notequals></and><equals><property/><text>srp</text></equals></and><equals><experience/><text>uh3</text></equals></and></and>",
+                        "rule_position": 5,
+                        "rule_weight": 0,
+                        "template_instance": [
+                            {
+                                "id": 15376,
+                                "modified_by": 0,
+                                "name": "Universal Header 3.0.3 Modified Layout",
+                                "status_id": 0,
+                                "template_id": 10604,
+                                "timestamp": "2012-11-13T23:20:32.000Z"
+                            }
+                        ],
+                        "template_instance_id": 15376,
+                        "timestamp": "2013-03-23T19:40:51.000Z"
+                    }
+                ],
+                "info": {
+                    "elapsed_time": 9,
+                    "inputs": {
+                        "_component_instance_id": "21024",
+                        "count": 5,
+                        "show_component_instance": "1",
+                        "show_template_instance": "1",
+                        "start": 0
+                    },
+                    "total": 41
                 }
             }
