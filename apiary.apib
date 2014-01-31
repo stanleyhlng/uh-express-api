@@ -373,3 +373,79 @@ HOST: http://www.google.com
                     "total": 7
                 }
             }
+            
+## ComponentInstance [/components/instances/{id}]
+### Retrieve a component instance [GET]
+
++ Parameters
+
+    + id (required, string, `1`) ... Component instance id
+    
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "code": 200,
+                "data": {
+                    "attribute_values": [
+                        {
+                            "attribute_name": [
+                                {
+                                    "default_value": "active",
+                                    "id": 6,
+                                    "modified_by": 1,
+                                    "name": "Status",
+                                    "timestamp": "2010-08-19T21:43:11.000Z"
+                                }
+                            ],
+                            "attribute_name_id": 6,
+                            "id": 7,
+                            "modified_by": 13,
+                            "normalized_value": "inactive",
+                            "timestamp": "2010-08-19T21:43:11.000Z",
+                            "value": "inactive"
+                        },
+                        {
+                            "attribute_name": [
+                                {
+                                    "default_value": "standard",
+                                    "id": 7,
+                                    "modified_by": 0,
+                                    "name": "format",
+                                    "timestamp": "2010-09-01T05:44:51.000Z"
+                                }
+                            ],
+                            "attribute_name_id": 7,
+                            "id": 25,
+                            "modified_by": 0,
+                            "normalized_value": "standard",
+                            "timestamp": "2010-09-01T05:46:27.000Z",
+                            "value": "standard"
+                        }
+                    ],
+                    "component": [
+                        {
+                            "modified_by": 1,
+                            "name": "Universal Header",
+                            "timestamp": "2010-08-19T21:39:47.000Z"
+                        }
+                    ],
+                    "component_id": 1,
+                    "hashcode": "da6e2ad4dda1de21a28f4f237da4c0b2",
+                    "id": 21024,
+                    "modified_by": 0,
+                    "name": "standard",
+                    "status_id": 3,
+                    "timestamp": "2012-05-24T22:12:34.000Z"
+                },
+                "info": {
+                    "elapsed_time": 10,
+                    "inputs": {
+                        "_id": "21024",
+                        "show_attribute_name": "1",
+                        "show_attribute_values": "1",
+                        "show_component": "1"
+                    }
+                }
+            }
