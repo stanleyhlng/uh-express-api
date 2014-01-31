@@ -6,7 +6,6 @@ HOST: http://www.google.com
 # Group Components Resources
 
 ## Attribute Names [/components/attributes{?start,count}]
-
 ### List all attribute names [GET]
 
 + Parameters
@@ -131,12 +130,11 @@ HOST: http://www.google.com
             }
 
 ## Attribute Values [/components/attributes/{id}{?start,count}]
-
 ### List all attribute values. [GET]
 
 + Parameters
 
-    + id (required, number, `1`) ... Component Attribute Id
+    + id (required, number, `1`) ... Component Attribute id
     + start (optional, number, `0`) ... This offsets the start of each page by the number specified.
     + count (optional, number, `10`) ... This is the number of records returned in each page.  A count of 0 will return to no results.
 
@@ -204,7 +202,6 @@ HOST: http://www.google.com
             }
             
 ## Collection [/components{?start,count}]
-
 ### List all components [GET]
 
 + Parameters
@@ -257,5 +254,49 @@ HOST: http://www.google.com
                         "start": 0
                     },
                     "total": 195
+                }
+            }
+            
+## Object [/components/{id}]
+### Retrieve a component [GET]
+
++ Parameters
+
+    + id (required, number, `1`) ... Component id
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "code": 200,
+                "data": {
+                    "attribute_names": [
+                        {
+                            "default_value": "active",
+                            "id": 6,
+                            "modified_by": 1,
+                            "name": "Status",
+                            "timestamp": "2010-08-19T21:43:11.000Z"
+                        },
+                        {
+                            "default_value": "standard",
+                            "id": 7,
+                            "modified_by": 0,
+                            "name": "format",
+                            "timestamp": "2010-09-01T05:44:51.000Z"
+                        }
+                    ],
+                    "id": 1,
+                    "modified_by": 1,
+                    "name": "Universal Header",
+                    "timestamp": "2010-08-19T21:39:47.000Z"
+                },
+                "info": {
+                    "elapsed_time": 3,
+                    "inputs": {
+                        "_id": "1",
+                        "show_attribute_names": "1"
+                    }
                 }
             }
