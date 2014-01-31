@@ -3,19 +3,21 @@ HOST: http://www.google.com
 
 # UH CMS API v1
 
-# Group Components
-Components related resources of the **Components API**
+# Group Components Resources
 
-## Components Attributes Collection [/components/attributes{?start,count}]
-### List all Components Attributes [GET]
+## Component Attribute Names [/components/attributes{?start,count}]
+
+### List all component attribute names [GET]
 
 + Parameters
+
     + start (optional, number, `0`) ... This offsets the start of each page by the number specified.
     + count (optional, number, `10`) ... This is the number of records returned in each page.  A count of 0 will return to no results.
 
 + Response 200 (application/json)
 
     + Body
+    
             {
                 "code": 200,
                 "data": [
@@ -126,6 +128,78 @@ Components related resources of the **Components API**
                     },
                     "total": 14
                 }
+            }
+
+## Component Attribute Values [/components/attributes/{id}{?start,count}]
+
+### List all component attribute values [GET]
+
++ Parameters
+
+    + start (optional, number, `0`) ... This offsets the start of each page by the number specified.
+    + count (optional, number, `10`) ... This is the number of records returned in each page.  A count of 0 will return to no results.
+
++ Response 200 (application/json)
+
+    + Body
+    
+            {
+            
+                    "code": 200,
+                    "data": {
+                        "attribute_values": [
+                            {
+                                "id": 327,
+                                "modified_by": 0,
+                                "normalized_value": "celebrity",
+                                "timestamp": "2013-12-20T01:23:10.000Z",
+                                "value": "celebrity"
+                            },
+                            {
+                                "id": 326,
+                                "modified_by": 0,
+                                "normalized_value": "settings",
+                                "timestamp": "2013-12-16T22:30:39.000Z",
+                                "value": "settings"
+                            },
+                            {
+                                "id": 325,
+                                "modified_by": 0,
+                                "normalized_value": "mag_tech",
+                                "timestamp": "2013-11-22T20:31:39.000Z",
+                                "value": "mag_tech"
+                            },
+                            {
+                                "id": 324,
+                                "modified_by": 0,
+                                "normalized_value": "meeticaffinity",
+                                "timestamp": "2013-11-11T08:43:33.000Z",
+                                "value": "meeticaffinity"
+                            },
+                            {
+                                "id": 323,
+                                "modified_by": 0,
+                                "normalized_value": "meetic",
+                                "timestamp": "2013-11-11T08:43:13.000Z",
+                                "value": "meetic"
+                            }
+                        ],
+                        "default_value": "",
+                        "id": 1,
+                        "modified_by": 1,
+                        "name": "Property",
+                        "timestamp": "2010-08-19T21:43:11.000Z"
+                    },
+                    "info": {
+                        "elapsed_time": 5,
+                        "inputs": {
+                            "_id": "1",
+                            "count": 5,
+                            "show_attribute_values": "1",
+                            "start": 0
+                        },
+                        "total": 124
+                    }
             }
 
 ## Components Collection [/components{?start,count}]
