@@ -7,6 +7,128 @@ Notes API is a *short texts saving* service similar to its physical paper presen
 # Group Components
 Components related resources of the **Components API**
 
+## Components Attributes Collection [/components/attributes{?start,count}]
+### List all Components Attributes [GET]
+
++ Parameters
+    + start (optional, number, `0`) ... This offsets the start of each page by the number specified.
+    + count (optional, number, `10`) ... This is the number of records returned in each page.  A count of 0 will return to no results.
+
++ Response 200 (application/json)
+
+    + Body
+            {
+                "code": 200,
+                "data": [
+                    {
+                        "default_value": "",
+                        "id": 14,
+                        "modified_by": 0,
+                        "name": "games",
+                        "timestamp": "2012-09-27T15:59:20.000Z"
+                    },
+                    {
+                        "default_value": "",
+                        "id": 13,
+                        "modified_by": 0,
+                        "name": "device",
+                        "timestamp": "2011-12-22T00:39:09.000Z"
+                    },
+                    {
+                        "default_value": "standard",
+                        "id": 12,
+                        "modified_by": 0,
+                        "name": "style",
+                        "timestamp": "2010-09-01T05:46:03.000Z"
+                    },
+                    {
+                        "default_value": "standard",
+                        "id": 11,
+                        "modified_by": 0,
+                        "name": "comarketing",
+                        "timestamp": "2010-09-01T05:45:50.000Z"
+                    },
+                    {
+                        "default_value": "standard",
+                        "id": 10,
+                        "modified_by": 0,
+                        "name": "forcecobrand",
+                        "timestamp": "2010-09-01T05:45:37.000Z"
+                    },
+                    {
+                        "default_value": "0",
+                        "id": 9,
+                        "modified_by": 0,
+                        "name": "https",
+                        "timestamp": "2010-09-01T05:45:24.000Z"
+                    },
+                    {
+                        "default_value": "0",
+                        "id": 8,
+                        "modified_by": 0,
+                        "name": "iframe",
+                        "timestamp": "2010-09-01T05:45:13.000Z"
+                    },
+                    {
+                        "default_value": "standard",
+                        "id": 7,
+                        "modified_by": 0,
+                        "name": "format",
+                        "timestamp": "2010-09-01T05:44:51.000Z"
+                    },
+                    {
+                        "default_value": "active",
+                        "id": 6,
+                        "modified_by": 1,
+                        "name": "Status",
+                        "timestamp": "2010-08-19T21:43:11.000Z"
+                    },
+                    {
+                        "default_value": "signedout",
+                        "id": 5,
+                        "modified_by": 1,
+                        "name": "AuthState",
+                        "timestamp": "2010-08-19T21:43:11.000Z"
+                    },
+                    {
+                        "default_value": "standard",
+                        "id": 4,
+                        "modified_by": 1,
+                        "name": "Cobrand",
+                        "timestamp": "2010-08-19T21:43:11.000Z"
+                    },
+                    {
+                        "default_value": "standard",
+                        "id": 3,
+                        "modified_by": 1,
+                        "name": "Tag",
+                        "timestamp": "2010-08-19T21:43:11.000Z"
+                    },
+                    {
+                        "default_value": "en-US",
+                        "id": 2,
+                        "modified_by": 1,
+                        "name": "LanguageTag",
+                        "timestamp": "2010-08-19T21:43:11.000Z"
+                    },
+                    {
+                        "default_value": "",
+                        "id": 1,
+                        "modified_by": 1,
+                        "name": "Property",
+                        "timestamp": "2010-08-19T21:43:11.000Z"
+                    }
+                ],
+                "info": {
+                    "elapsed_time": 6,
+                    "inputs": {
+                        "count": 50,
+                        "start": 0
+                    },
+                    "total": 14
+                }
+            }
+
 ## Components Collection [/components{?start,count}]
 ### List all Components [GET]
 
