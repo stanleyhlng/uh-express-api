@@ -202,3 +202,60 @@ HOST: http://www.google.com
                         "total": 124
                     }
             }
+            
+## Collection [/components{?start,count}]
+
+### List all components [GET]
+
++ Parameters
+
+    + start (optional, number, `0`) ... This offsets the start of each page by the number specified.
+    + count (optional, number, `10`) ... This is the number of records returned in each page.  A count of 0 will return to no results.
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "code": 200,
+                "data": [
+                    {
+                        "id": 270,
+                        "modified_by": 0,
+                        "name": "uh3_css_gridoverride",
+                        "timestamp": "2014-01-15T23:19:32.000Z"
+                    },
+                    {
+                        "id": 269,
+                        "modified_by": 0,
+                        "name": "uh3_assistarrows",
+                        "timestamp": "2014-01-15T19:30:54.000Z"
+                    },
+                    {
+                        "id": 267,
+                        "modified_by": 0,
+                        "name": "uh3_search_yhs_input",
+                        "timestamp": "2013-12-18T20:34:25.000Z"
+                    },
+                    {
+                        "id": 266,
+                        "modified_by": 0,
+                        "name": "uh3_sidebar",
+                        "timestamp": "2013-12-01T21:03:27.000Z"
+                    },
+                    {
+                        "id": 265,
+                        "modified_by": 0,
+                        "name": "string_open_search",
+                        "timestamp": "2013-11-26T17:25:35.000Z"
+                    }
+                ],
+                "info": {
+                    "elapsed_time": 3,
+                    "inputs": {
+                        "count": 5,
+                        "start": 0
+                    },
+                    "total": 195
+                }
+            }
