@@ -750,3 +750,50 @@ HOST: http://www.google.com
             
 ## TemplateAttribute [/templates/attribute/{id}{?start,count}]
 ### Retrieve an attribute [GET]
+
++ Parameters
+
+    + id (required, number, `1`) ... Template Attribute id
+    + start (optional, number, `0`) ... This offsets the start of each page by the number specified.
+    + count (optional, number, `10`) ... This is the number of records returned in each page.  A count of 0 will return to no results.
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "code": 200,
+                "data": {
+                    "attribute_values": [
+                        {
+                            "id": 39358,
+                            "modified_by": 0,
+                            "template_instance_id": 16752,
+                            "timestamp": "2013-11-05T02:15:57.000Z",
+                            "value": "#1b44ab"
+                        },
+                        {
+                            "id": 39352,
+                            "modified_by": 0,
+                            "template_instance_id": 16749,
+                            "timestamp": "2013-11-05T01:35:51.000Z",
+                            "value": "#0e2b5c"
+                        }
+                    ],
+                    "id": 84,
+                    "modified_by": 0,
+                    "name": "background color",
+                    "timestamp": "2013-11-05T01:22:02.000Z",
+                    "type": "Text"
+                },
+                "info": {
+                    "elapsed_time": 5,
+                    "inputs": {
+                        "_id": "84",
+                        "count": 5,
+                        "show_attribute_values": "1",
+                        "start": 0
+                    },
+                    "total": 2
+                }
+            }
