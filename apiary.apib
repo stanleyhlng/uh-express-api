@@ -1184,3 +1184,202 @@ HOST: http://www.google.com
                 }
             }
 
+## RuleInstance Collection [/templates/instances/{id}/rules/instances{?start,count}]
+### List all the rules of a template instance [GET]
+
++ Parameters
+
+    + id (required, string, `21024`) ... Component instance id
+    + start (optional, number, `0`) ... This offsets the start of each page by the number specified.
+    + count (optional, number, `10`) ... This is the number of records returned in each page.  A count of 0 will return to no results.
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "code": 200,
+                "data": [
+                    {
+                        "component_instance": [
+                            {
+                                "component_id": 1,
+                                "hashcode": "da6e2ad4dda1de21a28f4f237da4c0b2",
+                                "id": 21024,
+                                "modified_by": 0,
+                                "name": "standard",
+                                "status_id": 3,
+                                "timestamp": "2012-05-24T22:12:34.000Z"
+                            }
+                        ],
+                        "component_instance_id": 21024,
+                        "id": 260,
+                        "mapping_id": 32530,
+                        "modified_by": 0,
+                        "name": "property is srp and experience is uh3",
+                        "rule_id": 0,
+                        "rule_instance_value": "<and><notequals><iframe/><text>1</text></notequals><and><and><and><notequals><device/><text>smartphone</text></notequals><notequals><device/><text>tablet</text></notequals></and><equals><property/><text>srp</text></equals></and><equals><experience/><text>uh3</text></equals></and></and>",
+                        "rule_position": 5,
+                        "rule_weight": 0,
+                        "template_instance": [
+                            {
+                                "id": 15376,
+                                "modified_by": 0,
+                                "name": "Universal Header 3.0.3 Modified Layout",
+                                "status_id": 0,
+                                "template_id": 10604,
+                                "timestamp": "2012-11-13T23:20:32.000Z"
+                            }
+                        ],
+                        "template_instance_id": 15376,
+                        "timestamp": "2013-03-23T19:40:51.000Z"
+                    },
+                    {
+                        "component_instance": [
+                            {
+                                "component_id": 1,
+                                "hashcode": "da6e2ad4dda1de21a28f4f237da4c0b2",
+                                "id": 21024,
+                                "modified_by": 0,
+                                "name": "standard",
+                                "status_id": 3,
+                                "timestamp": "2012-05-24T22:12:34.000Z"
+                            }
+                        ],
+                        "component_instance_id": 21024,
+                        "id": 378,
+                        "mapping_id": 33675,
+                        "modified_by": 0,
+                        "name": "experience IS GS",
+                        "rule_id": 0,
+                        "rule_instance_value": "<equals><experience/><text>GS</text></equals>",
+                        "rule_position": 7,
+                        "rule_weight": 0,
+                        "template_instance": [
+                            {
+                                "id": 15376,
+                                "modified_by": 0,
+                                "name": "Universal Header 3.0.3 Modified Layout",
+                                "status_id": 0,
+                                "template_id": 10604,
+                                "timestamp": "2012-11-13T23:20:32.000Z"
+                            }
+                        ],
+                        "template_instance_id": 15376,
+                        "timestamp": "2013-06-03T21:43:29.000Z"
+                    },
+                    {
+                        "component_instance": [
+                            {
+                                "component_id": 1,
+                                "hashcode": "da6e2ad4dda1de21a28f4f237da4c0b2",
+                                "id": 21024,
+                                "modified_by": 0,
+                                "name": "standard",
+                                "status_id": 3,
+                                "timestamp": "2012-05-24T22:12:34.000Z"
+                            }
+                        ],
+                        "component_instance_id": 21024,
+                        "id": 254,
+                        "mapping_id": 32512,
+                        "modified_by": 0,
+                        "name": "Bucket 900-919 (2%) and property finance (was 1%)",
+                        "rule_id": 0,
+                        "rule_instance_value": "<and><and><equals><languagetag/><text>en-us</text></equals><notequals><iframe/><text>1</text></notequals></and><and><and><and><notequals><device/><text>smartphone</text></notequals><notequals><device/><text>tablet</text></notequals></and><equals><property/><text>finance</text></equals></and><and><and><lessthan><buckettest><sampling><text>1000</text></sampling><bucketalgo><text>-1</text></bucketalgo></buckettest><num>920</num></lessthan><greaterthan><buckettest><sampling><text>1000</text></sampling><bucketalgo><text>-1</text></bucketalgo></buckettest><num>899</num></greaterthan></and><or><equals><cobrand/><text></text></equals><equals><cobrand/><text>standard</text></equals></or></and></and></and>",
+                        "rule_position": 9,
+                        "rule_weight": 0,
+                        "template_instance": [
+                            {
+                                "id": 15376,
+                                "modified_by": 0,
+                                "name": "Universal Header 3.0.3 Modified Layout",
+                                "status_id": 0,
+                                "template_id": 10604,
+                                "timestamp": "2012-11-13T23:20:32.000Z"
+                            }
+                        ],
+                        "template_instance_id": 15376,
+                        "timestamp": "2013-03-13T19:58:36.000Z"
+                    },
+                    {
+                        "component_instance": [
+                            {
+                                "component_id": 1,
+                                "hashcode": "da6e2ad4dda1de21a28f4f237da4c0b2",
+                                "id": 21024,
+                                "modified_by": 0,
+                                "name": "standard",
+                                "status_id": 3,
+                                "timestamp": "2012-05-24T22:12:34.000Z"
+                            }
+                        ],
+                        "component_instance_id": 21024,
+                        "id": 253,
+                        "mapping_id": 32509,
+                        "modified_by": 0,
+                        "name": "Bucket 900-919 (2%) and property sports (was 1%)",
+                        "rule_id": 0,
+                        "rule_instance_value": "<and><and><equals><languagetag/><text>en-us</text></equals><notequals><iframe/><text>1</text></notequals></and><and><and><and><notequals><device/><text>smartphone</text></notequals><notequals><device/><text>tablet</text></notequals></and><equals><property/><text>sports</text></equals></and><and><and><lessthan><buckettest><sampling><text>1000</text></sampling><bucketalgo><text>-1</text></bucketalgo></buckettest><num>920</num></lessthan><greaterthan><buckettest><sampling><text>1000</text></sampling><bucketalgo><text>-1</text></bucketalgo></buckettest><num>899</num></greaterthan></and><or><equals><cobrand/><text></text></equals><equals><cobrand/><text>standard</text></equals></or></and></and></and>",
+                        "rule_position": 10,
+                        "rule_weight": 0,
+                        "template_instance": [
+                            {
+                                "id": 15376,
+                                "modified_by": 0,
+                                "name": "Universal Header 3.0.3 Modified Layout",
+                                "status_id": 0,
+                                "template_id": 10604,
+                                "timestamp": "2012-11-13T23:20:32.000Z"
+                            }
+                        ],
+                        "template_instance_id": 15376,
+                        "timestamp": "2013-03-13T19:57:53.000Z"
+                    },
+                    {
+                        "component_instance": [
+                            {
+                                "component_id": 1,
+                                "hashcode": "da6e2ad4dda1de21a28f4f237da4c0b2",
+                                "id": 21024,
+                                "modified_by": 0,
+                                "name": "standard",
+                                "status_id": 3,
+                                "timestamp": "2012-05-24T22:12:34.000Z"
+                            }
+                        ],
+                        "component_instance_id": 21024,
+                        "id": 313,
+                        "mapping_id": 33025,
+                        "modified_by": 0,
+                        "name": "property is smb AND cobrand is standard AND lang is en-US",
+                        "rule_id": 0,
+                        "rule_instance_value": "<and><and><equals><languagetag/><text>en-us</text></equals><notequals><iframe/><text>1</text></notequals></and><and><and><and><notequals><device/><text>smartphone</text></notequals><notequals><device/><text>tablet</text></notequals></and><equals><property/><text>smb</text></equals></and><or><equals><cobrand/><text></text></equals><equals><cobrand/><text>standard</text></equals></or></and></and>",
+                        "rule_position": 12,
+                        "rule_weight": 0,
+                        "template_instance": [
+                            {
+                                "id": 15376,
+                                "modified_by": 0,
+                                "name": "Universal Header 3.0.3 Modified Layout",
+                                "status_id": 0,
+                                "template_id": 10604,
+                                "timestamp": "2012-11-13T23:20:32.000Z"
+                            }
+                        ],
+                        "template_instance_id": 15376,
+                        "timestamp": "2013-05-02T20:19:41.000Z"
+                    }
+                ],
+                "info": {
+                    "elapsed_time": 25,
+                    "inputs": {
+                        "_template_instance_id": "15376",
+                        "count": 5,
+                        "show_component_instance": "1",
+                        "show_template_instance": "1",
+                        "start": 0
+                    },
+                    "total": 33
+                }
+            }
