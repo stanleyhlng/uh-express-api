@@ -1482,3 +1482,54 @@ HOST: http://www.google.com
             }
 
 # Group Resources Resources
+
+## Resource Collection [/resources{?id,start,count}]
+### List all resources [GET]
+
++ Parameters
+
+    + id (optional, string, `11243`) ... Resource filters
+    + start (optional, number, `0`) ... This offsets the start of each page by the number specified.
+    + count (optional, number, `10`) ... This is the number of records returned in each page.  A count of 0 will return to no results.
+
++ Response 200 (application/json)
+
+    + Body
+    
+            {
+                "code": 200,
+                "data": [
+                    {
+                        "cache_path": "yahoo/platform/ucs/trunk/ucs_components/uh_3_0_2/css_gridoverride/css/180grid.css",
+                        "id": 11243,
+                        "meta": "{\"svn_path\":\"svn+ssh:\\/\\/svn.corp.yahoo.com\\/yahoo\\/platform\\/ucs\\/trunk\\/ucs_components\\/uh_3_0_2\\/css_gridoverride\\/css\\/180grid.css\",\"svn_rev\":\"27079\"}",
+                        "modified_by": 0,
+                        "name": "uh3_css_gridoverride 180 rail",
+                        "path": "yahoo/platform/ucs/trunk/ucs_components/uh_3_0_2/css_gridoverride/css/180grid.css",
+                        "resource": "#yucsHead #yucs #yucs-logo div{width:180px !important}#yucsHead #yucs-search{margin-left:180px !important}",
+                        "revision": 27079,
+                        "timestamp": "2014-01-15T23:38:10.000Z"
+                    },
+                    {
+                        "cache_path": "yahoo/platform/ucs/trunk/ucs_components/uh_3_0_2/css_gridoverride/markup/empty.html",
+                        "id": 11242,
+                        "meta": "{\"svn_path\":\"svn+ssh:\\/\\/svn.corp.yahoo.com\\/yahoo\\/platform\\/ucs\\/trunk\\/ucs_components\\/uh_3_0_2\\/css_gridoverride\\/markup\\/empty.html\",\"svn_rev\":\"27076\"}",
+                        "modified_by": 0,
+                        "name": "uh3_css_gridoverride empty",
+                        "path": "yahoo/platform/ucs/trunk/ucs_components/uh_3_0_2/css_gridoverride/markup/empty.html",
+                        "resource": " ",
+                        "revision": 27076,
+                        "timestamp": "2014-01-15T23:35:39.000Z"
+                    }
+                ],
+                "info": {
+                    "elapsed_time": 5,
+                    "inputs": {
+                        "count": 5,
+                        "id": "11243,11242",
+                        "start": 0
+                    },
+                    "total": 2
+                }
+            }
+
