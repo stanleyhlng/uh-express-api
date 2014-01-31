@@ -1386,4 +1386,70 @@ HOST: http://www.google.com
 
 # Group Rule Resources
 
+## Rule Collection [/rules{?id,start,count}]
+### List all rules [GET]
++ Parameters
+
+    + id (optional, string, `11058`) ... Rule filters
+    + start (optional, number, `0`) ... This offsets the start of each page by the number specified.
+    + count (optional, number, `10`) ... This is the number of records returned in each page.  A count of 0 will return to no results.
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "code": 200,
+                "data": [
+                    {
+                        "id": 627,
+                        "modified_by": 0,
+                        "name": "uhlr=1",
+                        "rule_id": 0,
+                        "rule_instance_value": "<equals><uhlr/><text>1</text></equals>",
+                        "timestamp": "2014-01-15T23:17:39.000Z"
+                    },
+                    {
+                        "id": 626,
+                        "modified_by": 0,
+                        "name": "property is non att cobranded smartphone/tablet",
+                        "rule_id": 0,
+                        "rule_instance_value": "<or><equals><property/><text>settings</text></equals><or><equals><property/><text>help</text></equals><or><equals><property/><text>my</text></equals><or><equals><property/><text>frontpage</text></equals><or><equals><property/><text>mag_tech</text></equals><or><equals><property/><text>mag_food</text></equals><equals><property/><text>maps</text></equals></or></or></or></or></or></or>",
+                        "timestamp": "2014-01-15T22:27:30.000Z"
+                    },
+                    {
+                        "id": 625,
+                        "modified_by": 0,
+                        "name": "GA news sbc",
+                        "rule_id": 0,
+                        "rule_instance_value": "<and><and><equals><languagetag/><text>en-us</text></equals><notequals><iframe/><text>1</text></notequals></and><and><and><and><notequals><device/><text>smartphone</text></notequals><notequals><device/><text>tablet</text></notequals></and><equals><property/><text>news</text></equals></and><equals><cobrand/><text>sbc</text></equals></and></and>",
+                        "timestamp": "2014-01-15T08:31:10.000Z"
+                    },
+                    {
+                        "id": 624,
+                        "modified_by": 0,
+                        "name": "IFRAME property:finance, cobrand:sbc AND lang is en-US",
+                        "rule_id": 0,
+                        "rule_instance_value": "<and><and><equals><languagetag/><text>en-us</text></equals><equals><iframe/><text>1</text></equals></and><and><and><and><notequals><device/><text>smartphone</text></notequals><notequals><device/><text>tablet</text></notequals></and><equals><property/><text>finance</text></equals></and><equals><cobrand/><text>sbc</text></equals></and></and>",
+                        "timestamp": "2014-01-15T08:23:51.000Z"
+                    },
+                    {
+                        "id": 623,
+                        "modified_by": 0,
+                        "name": "IFRAME property:travel, cobrand:sbc AND lang is en-US",
+                        "rule_id": 0,
+                        "rule_instance_value": "<and><and><equals><languagetag/><text>en-us</text></equals><equals><iframe/><text>1</text></equals></and><and><and><and><notequals><device/><text>smartphone</text></notequals><notequals><device/><text>tablet</text></notequals></and><equals><property/><text>travel</text></equals></and><equals><cobrand/><text>sbc</text></equals></and></and>",
+                        "timestamp": "2014-01-15T08:23:35.000Z"
+                    }
+                ],
+                "info": {
+                    "elapsed_time": 6,
+                    "inputs": {
+                        "count": 5,
+                        "start": 0
+                    },
+                    "total": 585
+                }
+            }
+
 # Group Resources Resources
