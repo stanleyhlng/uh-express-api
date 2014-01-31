@@ -652,3 +652,98 @@ HOST: http://www.google.com
             
 # Group Templates Resources
 
+## TemplateAttribute Collection [/templates/attributes{?start,count}]
+### List all attributes [GET]
+
++ Parameters
+
+    + start (optional, number, `0`) ... This offsets the start of each page by the number specified.
+    + count (optional, number, `10`) ... This is the number of records returned in each page.  A count of 0 will return to no results.
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "code": 200,
+                "data": [
+                    {
+                        "id": 93,
+                        "modified_by": 0,
+                        "name": "search action",
+                        "timestamp": "2013-12-20T04:20:08.000Z",
+                        "type": "Text"
+                    },
+                    {
+                        "id": 92,
+                        "modified_by": 0,
+                        "name": "anim size cls",
+                        "timestamp": "2013-12-13T03:10:05.000Z",
+                        "type": "Text"
+                    },
+                    {
+                        "id": 91,
+                        "modified_by": 0,
+                        "name": "wrapper width",
+                        "timestamp": "2013-12-13T02:22:43.000Z",
+                        "type": "Number"
+                    },
+                    {
+                        "id": 90,
+                        "modified_by": 0,
+                        "name": "yqlenv",
+                        "timestamp": "2013-12-06T19:18:19.000Z",
+                        "type": "Text"
+                    },
+                    {
+                        "id": 89,
+                        "modified_by": 0,
+                        "name": "sslsearchaction",
+                        "timestamp": "2013-12-05T22:56:51.000Z",
+                        "type": "URL"
+                    },
+                    {
+                        "id": 88,
+                        "modified_by": 0,
+                        "name": "glow color",
+                        "timestamp": "2013-11-05T01:22:02.000Z",
+                        "type": "Text"
+                    },
+                    {
+                        "id": 87,
+                        "modified_by": 0,
+                        "name": "gradient bottom color",
+                        "timestamp": "2013-11-05T01:22:02.000Z",
+                        "type": "Text"
+                    },
+                    {
+                        "id": 86,
+                        "modified_by": 0,
+                        "name": "gradient top color",
+                        "timestamp": "2013-11-05T01:22:02.000Z",
+                        "type": "Text"
+                    },
+                    {
+                        "id": 85,
+                        "modified_by": 0,
+                        "name": "border color",
+                        "timestamp": "2013-11-05T01:22:02.000Z",
+                        "type": "Text"
+                    },
+                    {
+                        "id": 84,
+                        "modified_by": 0,
+                        "name": "background color",
+                        "timestamp": "2013-11-05T01:22:02.000Z",
+                        "type": "Text"
+                    }
+                ],
+                "info": {
+                    "elapsed_time": 4,
+                    "inputs": {
+                        "count": 10,
+                        "start": 0
+                    },
+                    "total": 92
+                }
+            }
