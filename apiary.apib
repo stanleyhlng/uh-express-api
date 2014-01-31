@@ -257,7 +257,7 @@ HOST: http://www.google.com
                 }
             }
             
-## Component [/components/{id}]
+## Component [/components{id}]
 ### Retrieve a component [GET]
 
 + Parameters
@@ -799,7 +799,7 @@ HOST: http://www.google.com
             }
             
 ## Template Collection [/templates{?start,count}]
-###List all templates [GET]
+### List all templates [GET]
 
 + Parameters
 
@@ -861,5 +861,132 @@ HOST: http://www.google.com
                         "start": 0
                     },
                     "total": 11036
+                }
+            }
+
+## Template [/templates{id}]
+### Retrieve a template [GET]
+
++ Parameters
+
+    + id (required, number, `1`) ... Template id
+
++ Response 200 (application/json)
+
+    + Body
+    
+            {
+                "code": 200,
+                "data": {
+                    "attribute_names": [
+                        {
+                            "id": 46,
+                            "modified_by": 0,
+                            "name": "device",
+                            "timestamp": "2012-08-17T15:59:10.000Z",
+                            "type": "Text"
+                        },
+                        {
+                            "id": 52,
+                            "modified_by": 0,
+                            "name": "bucketid",
+                            "timestamp": "2013-01-17T21:13:57.000Z",
+                            "type": "Number"
+                        },
+                        {
+                            "id": 84,
+                            "modified_by": 0,
+                            "name": "background color",
+                            "timestamp": "2013-11-05T01:22:02.000Z",
+                            "type": "Text"
+                        },
+                        {
+                            "id": 85,
+                            "modified_by": 0,
+                            "name": "border color",
+                            "timestamp": "2013-11-05T01:22:02.000Z",
+                            "type": "Text"
+                        },
+                        {
+                            "id": 86,
+                            "modified_by": 0,
+                            "name": "gradient top color",
+                            "timestamp": "2013-11-05T01:22:02.000Z",
+                            "type": "Text"
+                        },
+                        {
+                            "id": 87,
+                            "modified_by": 0,
+                            "name": "gradient bottom color",
+                            "timestamp": "2013-11-05T01:22:02.000Z",
+                            "type": "Text"
+                        },
+                        {
+                            "id": 88,
+                            "modified_by": 0,
+                            "name": "glow color",
+                            "timestamp": "2013-11-05T01:22:02.000Z",
+                            "type": "Text"
+                        }
+                    ],
+                    "component": [
+                        {
+                            "modified_by": 0,
+                            "name": "uh3s_vertical_search_button",
+                            "show_component_attribute_names": [
+                                {
+                                    "default_value": "active",
+                                    "id": 6,
+                                    "modified_by": 1,
+                                    "name": "Status",
+                                    "timestamp": "2010-08-19T21:43:11.000Z"
+                                },
+                                {
+                                    "default_value": "",
+                                    "id": 1,
+                                    "modified_by": 1,
+                                    "name": "Property",
+                                    "timestamp": "2010-08-19T21:43:11.000Z"
+                                },
+                                {
+                                    "default_value": "en-US",
+                                    "id": 2,
+                                    "modified_by": 1,
+                                    "name": "LanguageTag",
+                                    "timestamp": "2010-08-19T21:43:11.000Z"
+                                }
+                            ],
+                            "timestamp": "2013-11-05T01:19:29.000Z"
+                        }
+                    ],
+                    "component_id": 258,
+                    "id": 11052,
+                    "modified_by": 0,
+                    "name": "uh3s vertical_search_button markup",
+                    "resource": [
+                        {
+                            "cache_path": "yahoo/platform/ucs/trunk/ucs_components/uh_3_0_4s/search/markup/vertical_search_button.html",
+                            "id": 11058,
+                            "meta": "{\"svn_path\":\"svn+ssh:\\/\\/svn.corp.yahoo.com\\/yahoo\\/platform\\/ucs\\/trunk\\/ucs_components\\/uh_3_0_4s\\/search\\/markup\\/vertical_search_button.html\",\"svn_rev\":\"25159\"}",
+                            "modified_by": 0,
+                            "name": "uh3s vertical_search_button markup",
+                            "path": "yahoo/platform/ucs/trunk/ucs_components/uh_3_0_4s/search/markup/vertical_search_button.html",
+                            "resource": "<td class=\"Grid W-10 Whs-nw Pstart-4\"><style type=\"text/css\">#UHSearchProperty, .Themable .ThemeReset #UHSearchProperty {background-color: ${{cms.background_color.text}};border-color: ${{cms.border_color.text}};background: -moz-linear-gradient(top,${{cms.gradient_top_color.text}} 0,${{cms.gradient_bottom_color.text}} 100%);background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,${{cms.gradient_top_color.text}}),color-stop(100%,${{cms.gradient_bottom_color.text}}));background: -webkit-linear-gradient(top,${{cms.gradient_top_color.text}} 0,${{cms.gradient_bottom_color.text}} 100%);background: -o-linear-gradient(top,${{cms.gradient_top_color.text}} 0,${{cms.gradient_bottom_color.text}} 100%);background: -ms-linear-gradient(top,${{cms.gradient_top_color.text}} 0,${{cms.gradient_bottom_color.text}} 100%);background: linear-gradient(to bottom,${{cms.gradient_top_color.text}} 0,${{cms.gradient_bottom_color.text}} 100%);box-shadow: inset 0 1px 3px 0 ${{cms.glow_color.text}},0 0 3px #555;}</style><input id=\"UHSearchProperty\" class=\"Grid-U Btn M-0\" type=\"button\" data-vfr=\"${{ucs.nestedcomponent.begin}}uh3_vsearch_fr${{ucs.nestedcomponent.end}}\"data-vsearch=\"${{ucs.ult.begin}}${{ucs.link.begin}}${{ucs.nestedcomponent.begin}}uh3_vertical_search_action${{ucs.nestedcomponent.end}}${{ucs.link.end}}${{ucs.section.begin}}UH 3S ${{cms.device.text}} Search ${{cms.bucketid.number}}${{ucs.section.end}}${{ucs.name.begin}}UH 3S ${{cms.device.text}} Assisted Vertical Search${{ucs.name.end}}${{ucs.ult.end}}\"value=\"${{ucs.nestedcomponent.begin}}uh3_vertical_search_btn_text${{ucs.nestedcomponent.end}}\"></td>",
+                            "revision": 25159,
+                            "timestamp": "2013-11-05T01:22:02.000Z"
+                        }
+                    ],
+                    "resource_id": 11058,
+                    "timestamp": "2013-11-05T01:22:02.000Z"
+                },
+                "info": {
+                    "elapsed_time": 10,
+                    "inputs": {
+                        "_id": "11052",
+                        "show_attribute_names": "1",
+                        "show_component": "1",
+                        "show_component_attribute_names": "1",
+                        "show_resource": "1"
+                    }
                 }
             }
