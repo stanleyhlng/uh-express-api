@@ -1452,4 +1452,33 @@ HOST: http://www.google.com
                 }
             }
 
+## Rule [/rules/{id}]
+### Retrieve a rule [GET]
+
++ Parameters
+
+    + id (required, number, `1`) ... Component id
+
++ Response 200 (application/json)
+
+    + Body
+    
+            {
+                "code": 200,
+                "data": {
+                    "id": 627,
+                    "modified_by": 0,
+                    "name": "uhlr=1",
+                    "rule_id": 0,
+                    "rule_instance_value": "<equals><uhlr/><text>1</text></equals>",
+                    "timestamp": "2014-01-15T23:17:39.000Z"
+                },
+                "info": {
+                    "elapsed_time": 8,
+                    "inputs": {
+                        "_id": "627"
+                    }
+                }
+            }
+
 # Group Resources Resources
