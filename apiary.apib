@@ -797,3 +797,69 @@ HOST: http://www.google.com
                     "total": 2
                 }
             }
+            
+## Template Collection [/templates{?start,count}]
+###List all templates [GET]
+
++ Parameters
+
+    + start (optional, number, `0`) ... This offsets the start of each page by the number specified.
+    + count (optional, number, `10`) ... This is the number of records returned in each page.  A count of 0 will return to no results.
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "code": 200,
+                "data": [
+                    {
+                        "component_id": 0,
+                        "id": 11237,
+                        "modified_by": 0,
+                        "name": "uh3_css_gridoverride 180 rail",
+                        "resource_id": 11243,
+                        "timestamp": "2014-01-15T23:38:10.000Z"
+                    },
+                    {
+                        "component_id": 270,
+                        "id": 11236,
+                        "modified_by": 0,
+                        "name": "uh3_css_gridoverride empty",
+                        "resource_id": 11242,
+                        "timestamp": "2014-01-15T23:35:39.000Z"
+                    },
+                    {
+                        "component_id": 270,
+                        "id": 11235,
+                        "modified_by": 0,
+                        "name": "uh3_css_gridoverride",
+                        "resource_id": 11241,
+                        "timestamp": "2014-01-15T23:30:35.000Z"
+                    },
+                    {
+                        "component_id": 269,
+                        "id": 11234,
+                        "modified_by": 0,
+                        "name": "uh3_assistarrows_on",
+                        "resource_id": 11240,
+                        "timestamp": "2014-01-15T20:03:52.000Z"
+                    },
+                    {
+                        "component_id": 269,
+                        "id": 11233,
+                        "modified_by": 0,
+                        "name": "uh3_assistarrows_off",
+                        "resource_id": 11239,
+                        "timestamp": "2014-01-15T20:02:09.000Z"
+                    }
+                ],
+                "info": {
+                    "elapsed_time": 5,
+                    "inputs": {
+                        "count": 5,
+                        "start": 0
+                    },
+                    "total": 11036
+                }
+            }
