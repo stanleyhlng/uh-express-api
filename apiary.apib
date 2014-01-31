@@ -1565,4 +1565,35 @@ HOST: http://www.google.com
                 }
             }
 
+## Resource [/resources/{id}]
+### Retrieve a resource [GET]
+
++ Parameters
+
+    + id (required, number, `11243`) ... Resource id
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "code": 200,
+                "data": {
+                    "cache_path": "yahoo/platform/ucs/trunk/ucs_components/uh_3_0_2/css_gridoverride/css/180grid.css",
+                    "id": 11243,
+                    "meta": "{\"svn_path\":\"svn+ssh:\\/\\/svn.corp.yahoo.com\\/yahoo\\/platform\\/ucs\\/trunk\\/ucs_components\\/uh_3_0_2\\/css_gridoverride\\/css\\/180grid.css\",\"svn_rev\":\"27079\"}",
+                    "modified_by": 0,
+                    "name": "uh3_css_gridoverride 180 rail",
+                    "path": "yahoo/platform/ucs/trunk/ucs_components/uh_3_0_2/css_gridoverride/css/180grid.css",
+                    "resource": "#yucsHead #yucs #yucs-logo div{width:180px !important}#yucsHead #yucs-search{margin-left:180px !important}",
+                    "revision": 27079,
+                    "timestamp": "2014-01-15T23:38:10.000Z"
+                },
+                "info": {
+                    "elapsed_time": 3,
+                    "inputs": {
+                        "_id": "11243"
+                    }
+                }
+            }
 
